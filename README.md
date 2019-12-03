@@ -1,2 +1,3 @@
-# rent_a_book
+# Rent_a_book
 Django Project
+-> Rent books online 
