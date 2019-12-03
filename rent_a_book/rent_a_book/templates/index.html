@@ -1,0 +1,213 @@
+{% load static from staticfiles %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Rent A Book For Children</title>
+    <meta name="description" content="Rent A Book For Children">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Reference to the style sheet  -->
+    <link rel="stylesheet" type="text/css" href="{% static '/landing_page/style.css' %}">
+    <!-- Added the favicon -->
+    <link rel='shortcut icon' href="{% static '/landing_page/logo.PNG' %}" type='image/x-icon' />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container-fluid abovenavbar">
+        <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                <p>Now Rent A Book Stores are available online as well as walk-in in four major cities of India!</p>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light sticky-top">
+        <a class="nav navbar-brand" href="#">
+            <strong>Rent A Book</strong> <em>for children</em> 
+        </a>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="{% url 'store' %}" class="navbar-right navbar-elements" style="margin-right:16px;"><i class="fa fa-shopping-bag" aria-hidden="true" style="margin-right:6px;font-size:20px;color:#fafafa;"></i><strong>Our Store</strong></a>
+                {% if user.is_authenticated %}
+                <a class="navbar-right navbar-elements" style="color:aqua !important;border:2px solid aqua !important;">Hello {{user.first_name}}</a>
+                <a href="{% url 'logout' %}" class="navbar-right navbar-elements">Log Out</a>
+                {% else %}
+                <a href="{% url 'login' %}" class="navbar-right navbar-elements">Log In</a>
+                <a href="{% url 'signup' %}" class="navbar-right navbar-elements">Sign Up</a>  
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid first-body">
+        <div class="row text-center">
+            <div class="col-xs-12 col-lg-12 col-md-12">
+                    <h1>Visit Our Store To View A Wide Range Of Books For Children<h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid upper-body">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                    <img src="{% static '/landing_page/logo.PNG' %}" alt="logo" width="20%" height="100%">
+                    <span class="upper_body_rhs text-center"><h1>Rent A Book Ranked In <a style="color:red">Top 10 of Startups</a></h1><br><h2>Through Rent A Book Membership u can rent books,toys from your home at the click of the button</h2>
+                <br><h4>~Sign Up on Rent A Book ASAP</h4></span>
+            </div>
+        </div>
+    </div>
+    <div class="container below-upper-body">
+        <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                <p class="below-upper-body-lhs"><strong>Children between ages 4 to 6</strong><i class="fa fa-caret-down" aria-hidden="true" style="font-size:20px;margin-left:6px;"></i><br>Children below this age are more prone to all this things and the<br>
+                    is that the problem is that the problem is that the is that the thing<br>
+                    lorem ipsum set ami and this is the problem face by all the things<br>
+                    and this is the problem that's waht is thereason of the problem</p>
+                <p class="below-upper-body-lhs"><strong>Children between ages 6 to 10</strong><i class="fa fa-caret-down" aria-hidden="true" style="font-size:20px;margin-left:6px;"></i><br>Children below this age are more prone to all this things and the<br>
+                    is that the problem is that the problem is that the is that the thing<br>
+                    lorem ipsum set ami and this is the problem face by all the things<br>
+                    and this is the problem that's waht is thereason of the problem</p>
+                <p class="below-upper-body-lhs"><strong>Children between ages 10 to 12</strong><i class="fa fa-caret-down" aria-hidden="true" style="font-size:20px;margin-left:6px;"></i><br>Children below this age are more prone to all this things and the<br>
+                    is that the problem is that the problem is that the is that the thing<br>
+                    lorem ipsum set ami and this is the problem face by all the things<br>
+                    and this is the problem that's waht is thereason of the problem</p>
+            </div>
+        </div>
+    </div>
+    <div class="container mid-body">
+        <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                <h1><strong>Too Many Books Piled Up But <span style="color:#dd2c00">No One</span> Reading Them?</strong></h1>
+                <img src="{% static '/landing_page/piled_up_childrens_books.png' %}">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid lower-body">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                <div class="card-group">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static '/landing_page/child_playing_block_game.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Rent A Toy</h5>
+                            <p class="card-text">Lorem Ipsum set dolor ami and this is the details from the store of reant a book which is a dbms mini project.</p>
+                            <p class="card-text"><small class="text-muted">Terms and Conditions apply</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="{% static '/landing_page/doorstep_delivery.png' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">On Time Delivery</h5>
+                            <p class="card-text">Lorem Ipsum set dolor ami and this is the details from the store of reant a book which is a dbms mini project.</p>
+                            <p class="card-text"><small class="text-muted">Terms and Conditions apply</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="{% static '/landing_page/pickup.png' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Doorstep pickup</h5>
+                            <p class="card-text">Lorem Ipsum set dolor ami and this is the details from the store of reant a book which is a dbms mini project.</p>
+                            <p class="card-text"><small class="text-muted">Terms and Conditions apply</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="{% static '/landing_page/books_comic.png' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Rent A Book</h5>
+                            <p class="card-text">Lorem Ipsum set dolor ami and this is the details from the store of reant a book which is a dbms mini project.</p>
+                            <p class="card-text"><small class="text-muted">Terms and Conditions apply</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid membership">
+        <div class="row text-center">
+            <div class="col-lg-6 col-md-6 col-xs-6" style="border-right:5px solid #004D40;">
+             <h1>Premium Membership</h1>
+            <ul>
+                <li> 2 Items per month</li>
+                <br>
+                <br>
+                <li> 1 day delivery</li>
+                <br>
+                <br>
+                <li> Lorem ipsum set ami</li>
+                <br>
+                <br>
+                <li>helloajdaf;jadlfjdas</li>
+                <br>
+                <br>
+                <li>dfhadfljhadlfhdjfdalkjsf</li>
+                <br>
+                <br>
+                <li>dadjfhladkjfhljdhfaljd</li>
+                <br>
+                <br>
+                <li>djfadlkjfadjlksflkdsjf</li>
+            </ul>
+                <br>
+                <br>
+                <button type="button" class="btn btn-success btn-lg">Register For Premium Membership</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-6">
+            <h1>Regular Membership</h1>
+            <ul>
+                <li> 2 Items per month</li>
+                <br>
+                <br>
+                <li> 1 day delivery</li>
+                <br>
+                <br>
+                <li> Lorem ipsum set ami</li>
+                <br>
+                <br>
+                <li>helloajdaf;jadlfjdas</li>
+                <br>
+            </ul>
+                <br>
+                <br>
+                <button type="button" class="btn btn-success btn-lg">Register For Regular Membership</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer">
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-4 col-xs-4" >
+                <h1>Contact Us</h1>
+                <br>
+                <h6>Vivekanand Education Soceity's Institute Of Technology<br>Department Of Electronics & Communications</h6>
+                <br>
+                <h6>Paarth Arkadi : <a href="#">2017.paarth.arkadi@ves.ac.in</a></h6>
+                <h6>Vaibhav Ghaisas : <a href="#">2017.vaibhav.ghaisas@ves.ac.in</a></h6>
+                <h6>Ankit Deopurkar : <a href="#">2017.ankit.deopurker@ves.ac.in</a></h6>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-4">
+                 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-4">
+                <img src="{% static '/landing_page/location_temp.PNG' %}" width="100%" height="100%">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid below-footer" style="background-color:#000a12;color:#cfd8dc;padding-bottom:16px;">
+        <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                Copyright | Paarth Arkadi @2019
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid belowfooter">
+        <div class="row text-center">
+            <div class="col-lg-6 col-md-6 col-xs-6">
+                <a href="#">For any queries contatct us</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

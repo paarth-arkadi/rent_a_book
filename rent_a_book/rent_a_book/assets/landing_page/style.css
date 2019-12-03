@@ -1,0 +1,181 @@
+.abovenavbar{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    color:white;
+    font-family:sans-serif;
+    font-size:16px;
+    padding:8px;
+    font-weight:100;
+}
+
+.navbar{
+    background-color:#004D40 !important;
+    padding:16px 0px !important;
+    margin-top:0px;
+    box-shadow: -5px 0px  10px black;
+    margin-bottom:0px;
+}
+
+.first-body{
+    background-image: url("books_background.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.first-body h1{
+    color:white;
+    font-family:sans-serif;
+    font-size:86px;
+    font-weight:900;
+    padding:5%;
+}
+
+.navbar-brand {
+    color:#fafafa !important;
+    margin-left:16px;
+    margin-right:0px;
+    font-family:sans-serif;
+}
+
+.navbar-elements{
+    color:#fafafa !important;
+    font-family:sans-serif;
+    margin-right:16px;
+    border:solid #fafafa 2px;
+    padding:16px;
+    border-radius:5%;
+}
+
+a.navbar-elements:hover{
+    text-decoration:none !important;
+    color: aqua !important;
+}
+
+.navbar-right{
+    display:inline !important;
+}
+
+.upper-body{
+    padding:0px;
+    margin:16px;
+    position:static;
+    margin-top:8%;
+    background:#e0f2f1;
+    padding;100px;
+}
+
+.upper-body img{
+    border-radius:50%;
+    transform:translate(0px,-30px)
+}
+
+.upper-body span{
+    position:absolute;
+    text-align:center;
+    margin-left:2%;
+    margin-right:2%;
+}
+
+.below-upper-body{
+    background:#eceff1;
+    position:static;
+    padding:0px;
+    margin:0px;
+    margin-top:40px;
+}
+
+
+.below-upper-body span{
+    position:absolute;
+    left:0%;
+    text-align:center;
+}
+
+.below-upper-body-lhs {
+    color:#004D40;
+    border-bottom:3px solid #004D40;
+    border-top:3px solid #004D40;
+    margin:30px;
+    display:block;
+    padding:16px;
+}
+
+.mid-body{
+    margin-top:50px;
+    position:static;
+}
+
+.mid-body h1{
+    color:#004D40;
+    border:5px solid #004D40;
+}
+
+.card{
+    display: !important;
+}
+
+.membership{
+    margin-top:30px;
+    position:static;
+}
+
+.membership h1{
+    color:#004D40;
+    border-bottom:5px solid #004D40;
+}
+
+.membership button{
+    position:absolute;
+    bottom:0;
+    right:25%;
+}
+
+.membership li{
+    font-family: sans-serif;
+    font-size:20px;
+    list-style-type:none;
+}
+
+.footer{
+    background-color:#263238;
+    margin-top:100px;
+    color:#cfd8dc;
+    padding-top:16px;
+    padding-bottom:100px;
+}
+
+.footer img{
+    box-shadow: -5px 0px  10px black;
+}
+
+.belowfooter{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    padding:2px;
+    font-size:2px;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+    background-color:#212121;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black; 
+    border-radius: 16px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#00695C; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00695C; 
+  }
